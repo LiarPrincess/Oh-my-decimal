@@ -1,0 +1,12 @@
+.DS_Store
+/.build
+/Packages
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+*.pyc
+
+/IntelRDFPMathLib20U2/*
+!/IntelRDFPMathLib20U2/.gitkeep
+
+# Links to important Intel files
+/intel-lib

@@ -1,0 +1,5 @@
+module Cbid {
+  header "header.h"
+  link "LIBBID_PATH"
+  export *
+}
