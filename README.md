@@ -6,7 +6,7 @@ If `Swift.Double` overrides the standard then `Swift.Double` behavior is impleme
 
 - sign of `sNaN` follows the same rules as sign of `qNaN` - this is not the case for `Swift.Double`. Note that while the creation of `sNaN` (`copy`, `copySign`, `scaleB` etc.) will give `sNaN`, most of the arithmetic operations will still return `qNaN` with `invalidOperation` flag raised.
 
-- value returned by the `significand` property is always positive. In Swift `(-Double.nan).significand` will return `-nan`. This is needed to make the `scaleB` axiom work: `let y = F(sign: x.sign, exponent: x.exponent, significand: x.significand)` then `x` and `y` should have the same value (for `NaN` that would be the same sign, signaling bit and payload). Note that:
+- value returned by the `significand` property is always positive. In Swift `(-Double.nan).significand` will return `-nan`. This is needed to make the `scaleB` axiom work: `let y = F(sign: x.sign, exponent: x.exponent, significand: x.significand)` then `x` and `y` [should be equal](https://developer.apple.com/documentation/swift/floatingpoint/init(sign:exponent:significand:)). Obviously `NaNs` are never equal (I'm not sure why documentation is written in this way), but we will have the same sign, signaling bit and payload. Note that:
   - `oh-my-decimal` does not implement `FloatingPoint` protocol from which this requirement comes from.
   - both `oh-my-decimal` and `Swift.Double` will return `sNaN` if the `significand` argument of `scaleB` is `sNaN`. Standard would return `qNaN` and raise `invalidOperation`.
 
