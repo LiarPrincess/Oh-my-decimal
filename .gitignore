@@ -1,0 +1,10 @@
+.DS_Store
+/.build
+/Packages
+.swiftpm/configuration/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+*.pyc
+default.profraw
+
+# Links to important Intel files
+/intel-lib

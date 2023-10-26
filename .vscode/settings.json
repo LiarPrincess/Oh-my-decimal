@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "IntelRDFPMathLib20U2/LIBRARY/*.o": true
+  },
+  "cSpell.words": ["libbid", "significand", "Speleotrove"],
+  "python.formatting.provider": "none",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}

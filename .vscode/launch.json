@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "name": "Debug test-hossam-fahmy",
+      "program": "${workspaceFolder:oh-my-decimal}/.build/debug/test-hossam-fahmy",
+      "args": ["Test-suites/Hossam-Fahmy-tests", "Test-suites/Oh-my-decimal-tests"],
+      "cwd": "${workspaceFolder:oh-my-decimal}",
+      "preLaunchTask": "swift: Build Debug test-hossam-fahmy"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "sourceLanguages": ["swift"],
+      "name": "Release test-hossam-fahmy",
+      "program": "${workspaceFolder:oh-my-decimal}/.build/release/test-hossam-fahmy",
+      "args": ["Test-suites/Hossam-Fahmy-tests", "Test-suites/Oh-my-decimal-tests"],
+      "cwd": "${workspaceFolder:oh-my-decimal}",
+      "preLaunchTask": "swift: Build Release test-hossam-fahmy"
+    }
+  ]
+}
